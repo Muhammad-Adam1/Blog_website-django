@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %} All My Posts  {% endblock title %}
+{% block css_files %} 
+    <link rel="stylesheet" href="{% static 'blog/all-posts.css' %}"> 
+    <link rel="stylesheet" href="{% static 'blog/post.css' %}">
+{% endblock css_files %}
+
+{% block content %}
+<section id="all-posts">
+    <h2>My Collected Posts</h2>
+    <ul>
+        {% for post in all_posts %}
+        {% include "blog/includes/post.html" %}
+        {% endfor %}
+        {% comment %}
+        you can't display data when one page has the static content and the other has the dynamic content you should
+        have to pass the data dynamically
+        {% endcomment %}
+    </ul>
+</section>
+
+
+
+
+{% endblock content %}
