@@ -1,0 +1,13 @@
+{
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter"
+    },
+    "python.languageServer": "Pylance",
+    "files.associations": {
+        "**/*.html" : "html",
+        "**/templates/**/*.html" : "django-html",
+        "**/templates/**/*" : "django-text",
+        "**/requirements{/**,*}.{txt,in}" : "pip-requirements"
+    },
+    "emmet.includeLanguages": {"django-html": "html"}
+}
